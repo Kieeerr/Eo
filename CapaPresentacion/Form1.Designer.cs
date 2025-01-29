@@ -71,6 +71,7 @@
             // 
             // LoginTxt
             // 
+            LoginTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LoginTxt.BorderColor = Color.FromArgb(255, 128, 0);
             LoginTxt.BorderRadius = 9;
             LoginTxt.CustomizableEdges = customizableEdges7;
@@ -94,6 +95,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges15;
             guna2CustomGradientPanel1.FillColor = Color.FromArgb(36, 76, 116);
             guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(248, 148, 32);
@@ -117,6 +119,7 @@
             // 
             // guna2TextBox1
             // 
+            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2TextBox1.BorderColor = Color.FromArgb(255, 128, 0);
             guna2TextBox1.BorderRadius = 9;
             guna2TextBox1.CustomizableEdges = customizableEdges13;
@@ -140,6 +143,7 @@
             // 
             // guna2TextBox2
             // 
+            guna2TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2TextBox2.BackColor = Color.Transparent;
             guna2TextBox2.BorderColor = Color.Transparent;
             guna2TextBox2.BorderThickness = 0;
@@ -169,6 +173,7 @@
             // 
             // guna2TextBox3
             // 
+            guna2TextBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2TextBox3.BackColor = Color.Transparent;
             guna2TextBox3.BorderColor = Color.Transparent;
             guna2TextBox3.BorderThickness = 0;
@@ -199,6 +204,7 @@
             // 
             // guna2PictureBox1
             // 
+            guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2PictureBox1.BackgroundImage = Properties.Resources.icono_w_1;
             guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox1.CustomizableEdges = customizableEdges5;
@@ -215,6 +221,7 @@
             // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button1.BackColor = Color.Transparent;
             guna2Button1.BackgroundImage = Properties.Resources.icons8_close_window_96;
             guna2Button1.BackgroundImageLayout = ImageLayout.Zoom;
@@ -235,6 +242,7 @@
             // 
             // guna2Button2
             // 
+            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button2.BackColor = Color.Transparent;
             guna2Button2.BackgroundImage = Properties.Resources.icons8_stop_96;
             guna2Button2.BackgroundImageLayout = ImageLayout.Zoom;
@@ -272,6 +280,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
