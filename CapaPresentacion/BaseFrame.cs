@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Form2 : Form
+    public partial class BaseFrame : Form
     {
-        public Form2()
+        public BaseFrame()
         {
             InitializeComponent();
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
         }
     }
 }

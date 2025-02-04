@@ -1,8 +1,8 @@
 namespace CapaPresentacion
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -23,6 +23,22 @@ namespace CapaPresentacion
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            string[] datos = new string[2];
+            datos[0] = IdTxt.Text;
+            datos[1] = NombUsuTxt.Text;
+            BaseFrame BaseFrame = new BaseFrame();
+
+            if (datos[0] == "9999" && datos[1] == "hanloscarsel")
+            {
+                BaseFrame.ShowDialog();
+
+               this.Hide();
+            }
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
