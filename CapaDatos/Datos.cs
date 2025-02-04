@@ -7,7 +7,7 @@ namespace CapaDatos
 {
     public class DatabaseHelper
     {
-      
+
     }
     public class ClienteDAO
     {
@@ -29,6 +29,24 @@ namespace CapaDatos
                     "SELECT * FROM Cliente WHERE ID = @ID", new { ID = id });
             }
         }
+
+        public class moras
+
+        {
+            public static Moras GetMoraById(string connectionString, int id)
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    return connection.QueryFirstOrDefault<Moras>(
+                        "SELECT * FROM Moras WHERE ID = @ID", new { ID = id });
+                }
+            }
+
+        }
+           
+       
+        
+        
     }
 }
 
