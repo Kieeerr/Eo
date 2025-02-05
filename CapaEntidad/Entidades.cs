@@ -4,8 +4,8 @@
     {
         public class Cliente
         {
-            public int ClienteID { get; set; }
-            public string NombreCompleto { get; set; }
+            public int ID { get; set; }
+            public string NombreC { get; set; }
             public decimal Sueldo { get; set; }
             public string Correo { get; set; }
             public string Telefono { get; set; }

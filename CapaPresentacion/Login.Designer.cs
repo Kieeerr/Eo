@@ -82,6 +82,7 @@
             IdTxt.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             IdTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             IdTxt.Font = new Font("Segoe UI", 9F);
+            IdTxt.ForeColor = Color.Black;
             IdTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             IdTxt.Location = new Point(290, 168);
             IdTxt.Margin = new Padding(3, 5, 3, 5);
@@ -130,6 +131,7 @@
             NombUsuTxt.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             NombUsuTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             NombUsuTxt.Font = new Font("Segoe UI", 9F);
+            NombUsuTxt.ForeColor = Color.Black;
             NombUsuTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             NombUsuTxt.Location = new Point(290, 285);
             NombUsuTxt.Margin = new Padding(3, 5, 3, 5);
