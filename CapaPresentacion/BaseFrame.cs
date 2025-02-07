@@ -39,6 +39,11 @@ namespace CapaPresentacion
         {
             AbrirFormHija(new Capital_form());
         }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Prestamoss());
+        }
     }
 
 }

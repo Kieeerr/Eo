@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaEntidad;
 using static CapaEntidad.Entidades;
 
 namespace CapaNegocio
@@ -18,6 +19,11 @@ namespace CapaNegocio
             {
                 return clienteDAO.ObtenerClientePorID(cliente);
             }
+
+        public bool RegistrarPrestamo(EntPrestamo prestamo)
+        {
+            return clienteDAO.RegistrarPrestamo(prestamo);
+        }
         }
     
 }

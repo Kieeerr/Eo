@@ -22,17 +22,7 @@
             public int Meses { get; set; }
             public decimal Porcentaje { get; set; }
         }
-        public class Prestamo
-        {
-            public int PrestamoID { get; set; }
-            public int ClienteID { get; set; }
-            public decimal Monto { get; set; }
-            public int TiempoMeses { get; set; }
-            public decimal Interes { get; set; }
-            public decimal MontoTotal { get; set; }
-            public decimal MontoAbonado { get; set; }
-            public decimal { get;set; }    
-        }
+       
         public class Fondo
         {
             public int FondoID { get; set; }
