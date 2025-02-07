@@ -1,3 +1,5 @@
+using static CapaEntidad.Entidades;
+
 namespace CapaPresentacion
 {
     public partial class Login : Form
@@ -29,13 +31,19 @@ namespace CapaPresentacion
             datos[1] = NombUsuTxt.Text;
             BaseFrame BaseFrame = new BaseFrame();
             Capital_form Capital_Form = new Capital_form();
+            Cliente cliente = new Cliente();
 
-            if (datos[0] == "9999" && datos[1] == "hanloscarsel")
+            if (datos[0] == "juanpapador@hotmail.com" && datos[1] == "hanloscarsel")
             {
+               Sesion.Correo = datos[0];
+               cliente.NombreC = datos[1];
                 BaseFrame.Show();
 
+
                this.Hide();
+
             }
+
 
         }
 

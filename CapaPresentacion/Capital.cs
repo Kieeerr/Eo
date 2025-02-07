@@ -20,21 +20,14 @@ namespace CapaPresentacion
         public Capital_form()
         {
             InitializeComponent();
-            CargarClientes();
+            
         }
 
 
         private ClienteNegocio ClienteNegocio = new ClienteNegocio();
         Cliente cliente = new Cliente();
 
-        private void CargarClientes()
-        {
-            var clientes = ClienteNegocio.ObtenerClientes();
-            cmbClientes.DataSource = new List<Cliente>(clientes);
-            cmbClientes.DisplayMember = "Nombre_C";
-            cmbClientes.ValueMember = "ID";
-        }
-
+       
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -42,14 +35,14 @@ namespace CapaPresentacion
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            Cliente clienteSeleccionado = cmbClientes.SelectedItem as Cliente;
+            Cliente clienteSeleccionado =  new Cliente();
             bool result = ClienteNegocio.ObtenerClientePorID(clienteSeleccionado);
-            if (result) 
+            if (result)
             {
-                clienteSeleccionado.ID = Convert.ToInt32(cmbClientes.SelectedValue);
+                
                 txtNombre.Text = clienteSeleccionado.NombreC;
                 txtSueldo.Text = clienteSeleccionado.Sueldo.ToString();
-                txtCorreo.Text = clienteSeleccionado.Correo;
+                txtCorreo.Text = Sesion.Correo;
                 txtTelefono.Text = clienteSeleccionado.Telefono;
                 txtGarantia.Text = clienteSeleccionado.ObjetoGarantia;
             }
@@ -58,9 +51,18 @@ namespace CapaPresentacion
                 MessageBox.Show("No se han encontrado datos con el id ingresado");
             }
 
-                
-            
+
+
         }
 
+        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

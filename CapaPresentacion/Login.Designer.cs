@@ -150,7 +150,7 @@
             guna2TextBox2.BorderColor = Color.Transparent;
             guna2TextBox2.BorderThickness = 0;
             guna2TextBox2.CustomizableEdges = customizableEdges11;
-            guna2TextBox2.DefaultText = "ID";
+            guna2TextBox2.DefaultText = "Correo";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -160,16 +160,17 @@
             guna2TextBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2TextBox2.ForeColor = Color.Orange;
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(378, 127);
+            guna2TextBox2.Location = new Point(358, 127);
             guna2TextBox2.Margin = new Padding(3, 5, 3, 5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderForeColor = Color.Transparent;
             guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2TextBox2.ShadowDecoration.Depth = 50;
-            guna2TextBox2.Size = new Size(43, 37);
+            guna2TextBox2.Size = new Size(88, 37);
             guna2TextBox2.TabIndex = 4;
             guna2TextBox2.TextAlign = HorizontalAlignment.Center;
             // 
@@ -196,6 +197,7 @@
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderForeColor = Color.Transparent;
             guna2TextBox3.PlaceholderText = "";
+            guna2TextBox3.ReadOnly = true;
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.Color = Color.Transparent;
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges10;

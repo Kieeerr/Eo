@@ -4,14 +4,19 @@
     {
         public class Cliente
         {
-            public int ID { get; set; }
+          
             public string NombreC { get; set; }
             public decimal Sueldo { get; set; }
-            public string Correo { get; set; }
+           
             public string Telefono { get; set; }
             public string ObjetoGarantia { get; set; }
         }
-
+        
+        public static class Sesion
+        {
+            public static int ID { get; set; }
+            public static string Correo { get; set; }
+        }
         public class Intereses
         {
             public int Meses { get; set; }
@@ -25,6 +30,8 @@
             public int TiempoMeses { get; set; }
             public decimal Interes { get; set; }
             public decimal MontoTotal { get; set; }
+            public decimal MontoAbonado { get; set; }
+            public decimal { get;set; }    
         }
         public class Fondo
         {

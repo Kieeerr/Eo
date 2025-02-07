@@ -25,18 +25,19 @@ namespace CapaDatos
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-              string query = "SELECT * FROM Cliente WHERE ID = @ID";
+              string query = "SELECT * FROM Cliente WHERE Correo = @Correo";
               SqlCommand command = new SqlCommand(query, connection);
-              command.Parameters.AddWithValue("@ID", cliente.ID);
+              command.Parameters.AddWithValue("@Correo", Sesion.Correo);
               connection.Open();
               SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read()) 
                 {
+                    Sesion.ID = (int)reader["ID"];
                     cliente.NombreC = reader["Nombre_C"].ToString();
                     cliente.Sueldo = (decimal)reader["Sueldo"];
                     cliente.Telefono = reader["Telefono"].ToString();
                     cliente.ObjetoGarantia = reader["Garantia"].ToString();
-                    cliente.Correo = reader["Correo"].ToString();
+                    Sesion.Correo = reader["Correo"].ToString();
                      return true;
 
                 }
@@ -46,26 +47,13 @@ namespace CapaDatos
                 }
 
 
+
             }
         }
 
-        public class moras
+     
 
-        {
-            public static Moras GetMoraById(string connectionString, int id)
-            {
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    return connection.QueryFirstOrDefault<Moras>(
-                        "SELECT * FROM Moras WHERE ID = @ID", new { ID = id });
-                }
-            }
-
-        }
-           
-       
-        
-        
     }
 }
+
 
