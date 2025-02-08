@@ -49,7 +49,7 @@ namespace CapaPresentacion
 
         private bool ValidarUsuario(string correo, string nombreUsuario)
         {
-            using (SqlConnection conexion = new SqlConnection(connectionString)) // Asegúrate de tener definida esta variable
+            using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 try
                 {
@@ -59,10 +59,10 @@ namespace CapaPresentacion
                     using (SqlCommand cmd = new SqlCommand(query, conexion))
                     {
                         cmd.Parameters.AddWithValue("@Correo", correo);
-                        cmd.Parameters.AddWithValue("@Nombre_C", nombreUsuario); // Cambiado a coincidir con la BD
+                        cmd.Parameters.AddWithValue("@Nombre_C", nombreUsuario);
 
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        return count > 0;  // Si count > 0, el usuario existe
+                        return count > 0;  
                     }
                 }
                 catch (Exception ex)

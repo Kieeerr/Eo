@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Moras_acumuladas : Form
+    public partial class Pagos : Form
     {
-        public Moras_acumuladas()
+        public Pagos()
         {
             InitializeComponent();
         }

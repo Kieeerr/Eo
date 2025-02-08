@@ -64,9 +64,9 @@ namespace CapaDatos
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = @"INSERT INTO Prestamo
-(ClienteID, Monto, TiempoMeses, Interes, MontoTotal, MontoAbonado, MontoPagado) 
-VALUES (@ClienteID, @Monto, @TiempoMeses, @Interes, @MontoTotal, @MontoAbonado, @MontoPagado);
-SELECT SCOPE_IDENTITY();";
+                    (ClienteID, Monto, TiempoMeses, Interes, MontoTotal, MontoAbonado, MontoPagado) 
+                    VALUES (@ClienteID, @Monto, @TiempoMeses, @Interes, @MontoTotal, @MontoAbonado, @MontoPagado);
+                    SELECT SCOPE_IDENTITY();";
                     SqlCommand command = new SqlCommand(query, connection);
 
                     command.Parameters.AddWithValue("@ClienteID", Sesion.ID);
@@ -74,8 +74,8 @@ SELECT SCOPE_IDENTITY();";
                     command.Parameters.AddWithValue("@TiempoMeses", prestamo.TiempoMeses);
                     command.Parameters.AddWithValue("@Interes", prestamo.Interes);
                     command.Parameters.AddWithValue("@MontoTotal", prestamo.MontoTotal);
-                    command.Parameters.AddWithValue("@MontoAbonado", 0); // Inicializar en 0 ya que es un nuevo préstamo
-                    command.Parameters.AddWithValue("@MontoPagado", 0); // Inicializar en 0 si aún no ha pagado nada
+                    command.Parameters.AddWithValue("@MontoAbonado", 0); 
+                    command.Parameters.AddWithValue("@MontoPagado", 0); 
                     command.Parameters.AddWithValue("@MontoCuota", prestamo.MontoCuota);
 
 
