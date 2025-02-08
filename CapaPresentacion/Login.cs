@@ -1,5 +1,5 @@
+using Microsoft.Data.SqlClient;
 using static CapaEntidad.Entidades;
-
 namespace CapaPresentacion
 {
     public partial class Login : Form
@@ -8,7 +8,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
+        string connectionString = "Server=R2D3;Database=FinanzasDB;User Id=sa;Password=elsupermono1;TrustServerCertificate=True;";
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -26,25 +26,51 @@ namespace CapaPresentacion
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            string[] datos = new string[2];
-            datos[0] = IdTxt.Text;
-            datos[1] = NombUsuTxt.Text;
-            BaseFrame BaseFrame = new BaseFrame();
-            Capital_form Capital_Form = new Capital_form();
-            Cliente cliente = new Cliente();
+            string correo = IdTxt.Text.Trim();
+            string nombreUsuario = NombUsuTxt.Text.Trim();
 
-            if (datos[0] == "juanpapador@hotmail.com" && datos[1] == "hanloscarsel")
+            if (ValidarUsuario(correo, nombreUsuario))
             {
-               Sesion.Correo = datos[0];
-               cliente.NombreC = datos[1];
-                BaseFrame.Show();
+                Sesion.Correo = correo;
 
-
-               this.Hide();
-
+                BaseFrame baseFrame = new BaseFrame();
+                baseFrame.Show();
+                this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Hide();
+
+        }
 
 
+
+        private bool ValidarUsuario(string correo, string nombreUsuario)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString)) // Asegúrate de tener definida esta variable
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "SELECT COUNT(*) FROM Cliente WHERE Correo = @Correo AND Nombre_C = @Nombre_C";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Correo", correo);
+                        cmd.Parameters.AddWithValue("@Nombre_C", nombreUsuario); // Cambiado a coincidir con la BD
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        return count > 0;  // Si count > 0, el usuario existe
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+                    return false;
+                }
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)

@@ -12,10 +12,11 @@ namespace CapaEntidad
             public int PrestamoID { get; set; }
             public int ClienteID { get; set; }
             public decimal Monto { get; set; }
-            public decimal MontoCuota { get; set; }
-            public int TiempoMeses { get; set; }
+             public decimal MontoPagado { get; set; }
+             public int TiempoMeses { get; set; }
             public decimal Interes { get; set; }
             public decimal MontoTotal { get; set; }
+            public decimal MontoCuota { get; set; }
             public string Estado {  get; set; }
 
         public decimal CalcularInteres(int numeroCuotas)

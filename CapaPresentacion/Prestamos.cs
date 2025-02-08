@@ -47,17 +47,22 @@ namespace CapaPresentacion
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            ClienteNegocio clienteNegocio = new ClienteNegocio();
+            // Asegurar que los datos del préstamo están correctamente asignados
+            prestamo.Interes = Convert.ToDecimal(txtporcent.Text);
+            prestamo.MontoTotal = Convert.ToDecimal(guna2TextBox7.Text);
+            prestamo.Estado = "Pendiente"; // Definir un estado inicial
+            prestamo.ClienteID = Entidades.Sesion.ID; // Verificar que `Sesion.ID` tenga un valor válido
 
+            ClienteNegocio clienteNegocio = new ClienteNegocio();
             bool resultado = clienteNegocio.RegistrarPrestamo(prestamo);
+
             if (resultado)
             {
-                MessageBox.Show("GOD");
+                MessageBox.Show("Préstamo registrado correctamente.");
             }
             else
             {
-                MessageBox.Show("F");
-
+                MessageBox.Show("Error al registrar el préstamo.");
             }
         }
     }

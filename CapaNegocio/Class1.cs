@@ -20,10 +20,13 @@ namespace CapaNegocio
                 return clienteDAO.ObtenerClientePorID(cliente);
             }
 
-        public bool RegistrarPrestamo(EntPrestamo prestamo)
-        {
-            return clienteDAO.RegistrarPrestamo(prestamo);
-        }
+         public bool RegistrarPrestamo(EntPrestamo prestamo)
+         {
+             return clienteDAO.RegistrarPrestamo(prestamo);
+
+         }
+            
+
         }
     
 }
